@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Сагсай сумын Х.Мусаханы нэрэмжит ЕБ-ын сургууль</title>
+
+<meta name="description"
+content="Баян-Өлгий аймгийн Сагсай сумын Х.Мусаханы нэрэмжит Ерөнхий боловсролын 1 дүгээр сургуулийн албан ёсны танилцуулга">
+
+<style>
+:root{
+    --primary:#0b3d91;
+    --secondary:#1261c9;
+    --accent:#f4b400;
+    --dark:#10233f;
+    --light:#f5f8fc;
+    --white:#fff;
+    --text:#26364a;
+    --muted:#68788e;
+    --shadow:0 12px 35px rgba(20,50,90,.12);
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:var(--secondary);
+    font-weight:700;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:var(--dark);
+    margin:8px 0;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
+}
+
+.navbar{
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    border-radius:14px 14px;
+    display:grid;
+    place-items:center;
+    color:white;
+    font-size:23px;
+    font-weight:bold;
+    background-image: url(ebs.png) border: 5px 5px;
+}
+
+.logo-text{
+    font-weight:800;
+    color:var(--dark);
+    line-height:1.2;
+}
+
+.logo-text small{
+    display:block;
+    color:var(--secondary);
+    font-size:11px;
+    margin-top:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:700;
+    color:#35465b;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--secondary);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    color:white;
+    position:relative;
+    overflow:hidden;
+    background:
+      linear-gradient(90deg,rgba(5,27,65,.94),rgba(8,63,140,.72)),
+      url(eeee.jpg)
+      center/cover;
+}
+
+.hero-content{
+    max-width:780px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 16px;
+    border-radius:30px;
+    margin-bottom:22px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.15;
+    margin-bottom:22px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    color:#e7efff;
+}
+
+.hero-buttons{
+    margin-top:32px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:#17202c;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.5);
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--primary);
+}
+
+/* STATS */
+
+.stats{
+    margin-top:-55px;
+    position:relative;
+    z-index:5;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    background:white;
+    padding:28px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:34px;
+    color:var(--secondary);
+}
+
+.stat span{
+    color:var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:440px;
+    border-radius:var(--radius);
+    background:
+      linear-gradient(135deg,rgba(11,61,145,.2),rgba(18,97,201,.15)),
+      url(sagsai.jpg)
+      center/cover;
+    box-shadow:var(--shadow);
+}
+
+.about-text h3{
+    color:var(--dark);
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.about-text p{
+    margin-bottom:16px;
+    color:#52647a;
+}
+
+.info-box{
+    background:#eef5ff;
+    border-left:5px solid var(--secondary);
+    padding:18px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card-icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    background:#eaf2ff;
+    display:grid;
+    place-items:center;
+    font-size:25px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:var(--dark);
+    margin-bottom:8px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+/* TIMELINE */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:3px;
+    height:100%;
+    background:#cbdcf6;
+}
+
+.timeline-item{
+    width:50%;
+    padding:15px 40px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-dot{
+    position:absolute;
+    top:25px;
+    width:16px;
+    height:16px;
+    background:var(--secondary);
+    border:4px solid white;
+    border-radius:50%;
+    box-shadow:0 0 0 3px #bcd5f8;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+    right:-8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-8px;
+}
+
+.timeline-content{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.timeline-content strong{
+    color:var(--secondary);
+    font-size:20px;
+}
+
+/* DIRECTORS */
+
+.table-wrap{
+    overflow-x:auto;
+    background:white;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:15px 18px;
+    border-bottom:1px solid #e8edf4;
+    text-align:left;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+}
+
+tr:hover td{
+    background:#f7faff;
+}
+
+/* ACHIEVEMENTS */
+
+.achievement{
+    border-top:4px solid var(--accent);
+}
+
+/* GRADUATES */
+
+.graduates{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.person{
+    background:white;
+    padding:23px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.person h4{
+    color:var(--dark);
+    margin-bottom:5px;
+}
+
+.person p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* NEWS */
+
+.news{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.news-card{
+    background:white;
+    overflow:hidden;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.news-img{
+    height:190px;
+    background:
+      linear-gradient(135deg,#0b3d91,#55a3ff);
+}
+
+.news-content{
+    padding:22px;
+}
+
+.news-content small{
+    color:var(--secondary);
+    font-weight:bold;
+}
+
+.news-content h3{
+    margin:8px 0;
+    color:var(--dark);
+}
+
+/* FACILITIES */
+
+.facilities{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.facility{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.facility-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact-section{
+    background:var(--dark);
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-section h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.contact-section p{
+    color:#c8d4e5;
+}
+
+.contact-item{
+    margin:20px 0;
+    display:flex;
+    gap:14px;
+}
+
+.contact-item span:first-child{
+    font-size:24px;
+}
+
+.map{
+    min-height:350px;
+    background:
+      linear-gradient(rgba(11,61,145,.55),rgba(11,61,145,.55)),
+      url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80")
+      center/cover;
+    border-radius:var(--radius);
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.map a{
+    background:white;
+    color:var(--primary);
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#07162c;
+    color:#aebbd0;
+    padding:35px 0;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.footer-title{
+    color:white;
+    font-weight:bold;
+}
+
+/* BACK TO TOP */
+
+.top{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:0;
+    background:var(--secondary);
+    color:white;
+    cursor:pointer;
+    display:none;
+    z-index:100;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .nav-links{
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:white;
+        flex-direction:column;
+        padding:25px;
+        display:none;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .stats-grid,
+    .cards,
+    .news{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .graduates{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .facilities{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:60px 0;
+    }
+
+    .stats-grid,
+    .cards,
+    .news,
+    .graduates,
+    .facilities{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .timeline::before{
+        left:8px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd){
+        width:100%;
+        left:0;
+        text-align:left;
+        padding-left:35px;
+        padding-right:0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:0;
+        right:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+<div class="container navbar">
+
+<a href="#home" class="logo">
+    <div class="logo-icon"><img src="ebs.png", border-radius 5px 5px></div>
+    <div class="logo-text">
+        САГСАЙ СУМЫН СУРГУУЛЬ
+        <small>Х.Мусаханы нэрэмжит</small>
+    </div>
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<ul class="nav-links" id="navLinks">
+    <li><a href="#home">Нүүр</a></li>
+    <li><a href="#about">Бидний тухай</a></li>
+    <li><a href="#history">Түүх</a></li>
+    <li><a href="#directors">Удирдлага</a></li>
+    <li><a href="#achievements">Амжилт</a></li>
+    <li><a href="#graduates">Төгсөгчид</a></li>
+    <li><a href="#news">Мэдээ</a></li>
+    <li><a href="#contact">Холбоо барих</a></li>
+</ul>
+
+</div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+<div class="hero-content">
+
+<div class="badge">
+    🎓 Баян-Өлгий аймаг • Сагсай сум
+</div>
+
+<h1>
+    Х.Мусаханы нэрэмжит<br>
+    Ерөнхий боловсролын сургууль
+</h1>
+
+<p>
+    Эрдэм мэдлэг, хүмүүжил, авьяас чадварыг эрхэмлэн
+    ирээдүйн иргэдийг бэлтгэж буй Сагсай сумын ууган сургуулийн
+    цахим танилцуулга.
+</p>
+
+<div class="hero-buttons">
+    <a href="#about" class="btn btn-primary">
+        Сургуулийн тухай
+    </a>
+
+    <a href="#history" class="btn btn-outline">
+        Түүхэн замнал
+    </a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+<div class="container stats-grid">
+
+<div class="stat">
+    <strong>1948</strong>
+    <span>Үндэс сууриа тавьсан он</span>
+</div>
+
+<div class="stat">
+    <strong>994</strong>
+    <span>Сурагч<br></span>
+</div>
+
+<div class="stat">
+    <strong>135</strong>
+    <span>Багш, ажилтан<br></span>
+</div>
+
+<div class="stat">
+    <strong>75+</strong>
+    <span>Жилийн түүх</span>
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+<div class="container">
+
+<div class="section-title">
+    <span>СУРГУУЛИЙН ТУХАЙ</span>
+    <h2>Бидний тухай</h2>
+    <p>Сагсай сумын ууган ерөнхий боловсролын сургуулийн танилцуулга</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-text">
+
+<h3>Х.Мусаханы нэрэмжит сургууль</h3>
+
+<p>
+Баян-Өлгий аймгийн Сагсай сумын Х.Мусаханы нэрэмжит
+Ерөнхий боловсролын 1 дүгээр сургууль нь 1948–1949 оны
+хичээлийн жилд “Уужим бага сургууль” нэртэйгээр
+үндэс сууриа тавьсан түүхтэй.
+</p>
+
+<p>
+Сургууль нь анхны үйл ажиллагаагаа 3 багш, 73 сурагч,
+3 үйлчилгээний ажилтантай эхлүүлж байжээ.
+</p>
+
+<p>
+2000–2001 оны хичээлийн жилд Монгол Улсын Засгийн газрын
+2000 оны 5 дугаар сарын 31-ний өдрийн 76 дугаар тогтоолоор
+Сагсай сумын уугуул, төр нийгмийн зүтгэлтэн
+Х.Мусаханы нэрэмжит сургууль болсон.
+</p>
+
+<div class="info-box">
+<strong>Албан ёсны нэр:</strong><br>
+Баян-Өлгий аймгийн Сагсай сумын
+Х.Мусаханы нэрэмжит Ерөнхий боловсролын 1 дүгээр сургууль
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- ================= HISTORY ================= -->
+
+<section id="history" style="background:#eef4fb;">
+<div class="container">
+
+<div class="section-title">
+    <span>ТҮҮХ</span>
+    <h2>Түүхэн замнал</h2>
+    <p>Сургуулийн үүсэл, хөгжил, өргөжилт</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1948–1949</strong>
+<p>
+Сагсай голын хөвөөнд “Уужим бага сургууль”
+нэртэйгээр 3 тасалгаатай хичээлийн танхим,
+2 өрөө гал тогооны байртайгаар байгуулагдав.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1949–1950</strong>
+<p>
+“Бэлчээрийн бага сургууль” нэртэй монгол сургууль
+байгуулагдаж, 3 багш, 71 сурагч, 3 ажилтантай
+үйл ажиллагаагаа эхлүүлэв.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1951–1952</strong>
+<p>
+Хоёр сургуулийг нэгтгэн “Уужим бага сургууль”
+гэж нэрлэв.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1970–1971</strong>
+<p>
+8 жилийн сургууль болон өргөжиж,
+440 сурагчийн багтаамжтай 2 давхар шинэ
+хичээлийн байр ашиглалтад оржээ.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1990–1991</strong>
+<p>
+10 жилийн сургууль болон өргөжсөн.
+9-р ангийн бүлгүүдийг нийгэм, байгаль ухааны
+чиглэлээр төрөлжүүлэн зохион байгуулж байв.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1997–1998</strong>
+<p>
+10 жилийн сургуулийн бүтэц өөрчлөгдөж,
+8 жилийн сургууль болсон.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>1999–2000</strong>
+<p>
+Дахин 10 жилийн сургууль болгон өөрчилсөн.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<strong>2000–2001</strong>
+<p>
+Монгол Улсын Засгийн газрын 2000 оны 76 дугаар
+тогтоолоор Х.Мусаханы нэрэмжит сургууль болов.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= SCHOOL FEATURES ================= -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span>БОЛОВСРОЛ</span>
+<h2>Сургуулийн онцлог</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">📚</div>
+<h3>Сургалт</h3>
+<p>
+Ерөнхий боловсролын сургалтын үйл ажиллагааг
+хэрэгжүүлж, сурагчдын мэдлэг, чадвар,
+хүмүүжлийг хөгжүүлэхэд чиглэнэ.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🏆</div>
+<h3>Амжилт</h3>
+<p>
+Сурагч, багш нар аймаг, улсын хэмжээний
+олимпиад, уралдаан, тэмцээнд амжилт гаргаж ирсэн.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🎨</div>
+<h3>Авьяас</h3>
+<p>
+Уран уншлага, дуу хөгжим, бүжиг, технологи,
+спорт, шатар зэрэг чиглэлээр сурагчдын авьяасыг
+хөгжүүлдэг.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">👨‍🏫</div>
+<h3>Багшийн хөгжил</h3>
+<p>
+Үе үеийн багш нар сургалтын чанар,
+материаллаг орчин, сурагчдын хөгжилд
+үнэтэй хувь нэмэр оруулжээ.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">📖</div>
+<h3>Номын сан</h3>
+<p>
+Сурагчдын бие даан суралцах, унших,
+судлах үйл ажиллагааг дэмждэг.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">⚽</div>
+<h3>Спорт</h3>
+<p>
+Сурагчдын бие бялдар, эрүүл мэнд,
+спортын авьяас чадварыг хөгжүүлэхэд анхаарна.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= DIRECTORS ================= -->
+
+<section id="directors" style="background:#eef4fb;">
+<div class="container">
+
+<div class="section-title">
+<span>УДИРДЛАГА</span>
+<h2>Үе үеийн сургуулийн захирлууд</h2>
+<p>Албан ёсны түүхэн танилцуулгад бүртгэгдсэн мэдээлэл</p>
+</div>
+
+<div class="table-wrap">
+
+<table>
+<thead>
+<tr>
+<th>№</th>
+<th>Захирал</th>
+<th>Ажилласан хугацаа</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>1</td><td>М.Бекей</td><td>1948–1949</td></tr>
+<tr><td>2</td><td>А.Тайф</td><td>1949–1950</td></tr>
+<tr><td>3</td><td>Б.Дэндэв</td><td>1949–1951</td></tr>
+<tr><td>4</td><td>А.Бугыбай</td><td>1950–1951</td></tr>
+<tr><td>5</td><td>А.Хавдыраш</td><td>1951–1952</td></tr>
+<tr><td>6</td><td>Д.Яшбай</td><td>1952–1953</td></tr>
+<tr><td>7</td><td>М.Бекей</td><td>1953–1956</td></tr>
+<tr><td>8</td><td>А.Расоль</td><td>1956–1957</td></tr>
+<tr><td>9</td><td>А.Тайф</td><td>1957–1960</td></tr>
+<tr><td>10</td><td>У.Хисабай</td><td>1960–1961</td></tr>
+<tr><td>11</td><td>З.Имахат</td><td>1961–1962</td></tr>
+<tr><td>12</td><td>Х.Хызырхан</td><td>1962–1963</td></tr>
+<tr><td>13</td><td>М.Халат</td><td>1963–1964</td></tr>
+<tr><td>14</td><td>Х.Ануархан</td><td>1964–1968</td></tr>
+<tr><td>15</td><td>Х.Халиасхар</td><td>1968–1969</td></tr>
+<tr><td>16</td><td>О.Солтан</td><td>1969–1970</td></tr>
+<tr><td>17</td><td>Х.Школь</td><td>1970–1980</td></tr>
+<tr><td>18</td><td>О.Байгадар</td><td>1980–1981</td></tr>
+<tr><td>19</td><td>Х.Тау</td><td>1981–1983</td></tr>
+<tr><td>20</td><td>Ш.Дулат</td><td>1983–1990</td></tr>
+<tr><td>21</td><td>К.Болат</td><td>1990–1997</td></tr>
+<tr><td>22</td><td>С.Ерия</td><td>1997–2000</td></tr>
+<tr><td>23</td><td>О.Байгадар</td><td>2000–2004</td></tr>
+<tr><td>24</td><td>Б.Жанимхан</td><td>2004–2007</td></tr>
+<tr><td>25</td><td>М.Мерейбек</td><td>2007–2012</td></tr>
+<tr><td>26</td><td>Т.Мурат</td><td>2012–2016</td></tr>
+<tr><td>27</td><td>М.Мерейбек</td><td>2016–2023</td></tr>
+<tr><td>28</td><td>С.Арманбек</td><td>2023-2026 </td></tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements">
+<div class="container">
+
+<div class="section-title">
+<span>БИДНИЙ БАХАРХАЛ</span>
+<h2>Амжилт, бахархал</h2>
+<p>Сургууль, багш, сурагчдын онцлох амжилтууд</p>
+</div>
+
+<div class="cards">
+
+<div class="card achievement">
+<h3>🏅 Олимпиад</h3>
+<p>
+Сурагчид аймаг болон улсын олимпиад,
+уралдаанд амжилттай оролцож ирсэн.
+</p>
+</div>
+
+<div class="card achievement">
+<h3>♟️ Шатар</h3>
+<p>
+Сургуулийн сурагчид “Цодгор хүү” шатрын
+тэмцээнд дараалсан жилүүдэд амжилт үзүүлж байжээ.
+</p>
+</div>
+
+<div class="card achievement">
+<h3>🎤 Урлаг</h3>
+<p>
+Уран уншлага, дуу, бүжгийн чиглэлээр
+аймаг, нийслэлийн түвшинд шалгарсан сурагчидтай.
+</p>
+</div>
+
+<div class="card achievement">
+<h3>🔬 Эрдэм шинжилгээ</h3>
+<p>
+Тус сургуулийг эдийн засаг, түүх, физик,
+техник, анагаах ухааны докторууд төгссөн.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= GRADUATES ================= -->
+
+<section id="graduates" style="background:#eef4fb;">
+<div class="container">
+
+<div class="section-title">
+<span>ТӨГСӨГЧИД</span>
+<h2>Манай төгсөгчид — бидний бахархал</h2>
+<p>Албан ёсны сургуулийн танилцуулгад дурдагдсан төгсөгчид</p>
+</div>
+
+<div class="graduates">
+
+<div class="person">
+<h4>Х.Ахсолтан</h4>
+<p>Эдийн засгийн ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>Б.Хайрат</h4>
+<p>Эдийн засгийн ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>Ц.Гантулга</h4>
+<p>Түүхийн ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>Ц.Баатар</h4>
+<p>Түүхийн ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>Р.Хоролжав</h4>
+<p>Физикийн ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>Ө.Есболд</h4>
+<p>Техникийн ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>Т.Гүлнар</h4>
+<p>Анагаах ухааны доктор</p>
+</div>
+
+<div class="person">
+<h4>А.Жанарбек</h4>
+<p>Уулын спортын ОУХМ</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= STUDENT ACHIEVERS ================= -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span>СУРАГЧДЫН АМЖИЛТ</span>
+<h2>Авьяаслаг сурагчид</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎙️ Уран уншлага</h3>
+<p>
+Н.Ермек, С.Хайрый, Ш.Жанбота,
+А.Айтолхын нар уран уншлагын чиглэлээр
+шалгарч байжээ.
+</p>
+</div>
+
+<div class="card">
+<h3>🎵 Дуу хөгжим</h3>
+<p>
+У.Маржан, Г.Ахерке зэрэг сурагчид
+дуу хөгжмийн чиглэлээр амжилт үзүүлсэн.
+</p>
+</div>
+
+<div class="card">
+<h3>💃 Бүжиг</h3>
+<p>
+Б.Нурбал зэрэг сурагчид бүжгийн
+чиглэлээр амжилт гаргаж байжээ.
+</p>
+</div>
+
+<div class="card">
+<h3>💻 Технологи</h3>
+<p>
+Т.Меруерт технологийн чиглэлээр
+амжилт үзүүлсэн сурагчдын нэг юм.
+</p>
+</div>
+
+<div class="card">
+<h3>♟️ Шатар</h3>
+<p>
+Ж.Жигер, М.Динасыл, З.Айшолпан нар
+“Цодгор хүү” шатрын тэмцээнд амжилт гаргаж байжээ.
+</p>
+</div>
+
+<div class="card">
+<h3>📜 Яруу найраг</h3>
+<p>
+Х.Гүлбану зэрэг сурагчид уран зохиол,
+яруу найргийн чиглэлээр амжилт гаргаж байжээ.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= FACILITIES ================= -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span>ОРЧИН</span>
+<h2>Сургалтын орчин</h2>
+<p>Сурагчдын суралцах, хөгжих орчин</p>
+</div>
+
+<div class="facilities">
+
+<div class="facility">
+<div class="facility-icon">🏫</div>
+<h3>Анги танхим</h3>
+<p>Сургалтын үндсэн орчин</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">📚</div>
+<h3>Номын сан</h3>
+<p>Унших, судлах орчин</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">⚽</div>
+<h3>Спортын орчин</h3>
+<p>Биеийн тамир, спорт</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🔬</div>
+<h3>Кабинет</h3>
+<p>Хичээлийн төрөлжсөн орчин</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🎭</div>
+<h3>Урлаг</h3>
+<p>Авьяас хөгжүүлэх орчин</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">💻</div>
+<h3>Компьютер</h3>
+<p>Цахим сургалтын орчин</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🏠</div>
+<h3>Дотуур байр</h3>
+<p>Орон нутгийн сурагчдын байр</p>
+</div>
+
+<div class="facility">
+<div class="facility-icon">🌳</div>
+<h3>Сургуулийн орчин</h3>
+<p>Сурагчдад зориулсан орчин</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= NEWS ================= -->
+
+<section id="news" style="background:#eef4fb;">
+<div class="container">
+
+<div class="section-title">
+<span>МЭДЭЭ МЭДЭЭЛЭЛ</span>
+<h2>Сургуулийн мэдээ</h2>
+<p>Энэ хэсэгт шинэ мэдээ, зарлалуудаа нэмээрэй</p>
+</div>
+
+<div class="news">
+
+<div class="news-card">
+<div class="news-img"></div>
+<div class="news-content">
+<small>СУРГУУЛИЙН МЭДЭЭ</small>
+<h3>Сургуулийн шинэ мэдээ</h3>
+<p>
+Энд сургуулийн өдөр тутмын үйл ажиллагаа,
+арга хэмжээний талаарх мэдээллийг байрлуулна.
+</p>
+</div>
+</div>
+
+<div class="news-card">
+<div class="news-img"></div>
+<div class="news-content">
+<small>АМЖИЛТ</small>
+<h3>Сурагчдын амжилт</h3>
+<p>
+Олимпиад, тэмцээн, уралдааны үр дүн болон
+сурагчдын амжилтыг энд нийтэлнэ.
+</p>
+</div>
+</div>
+
+<div class="news-card">
+<div class="news-img"></div>
+<div class="news-content">
+<small>ЗАРЛАЛ</small>
+<h3>Сургуулийн зарлал</h3>
+<p>
+Эцэг эх, сурагч, багш ажилтнуудад зориулсан
+зарлал мэдээллийг энд байрлуулна.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= FIRST GRADUATES ================= -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span>ТҮҮХЭН ТӨГСӨГЧИД</span>
+<h2>Анхны төгсөгчид</h2>
+<p>1948–1949 оны хичээлийн жилийн анхны төгсөгчдийн нэрс</p>
+</div>
+
+<div class="card">
+
+<p>
+Н.Дүримбай, Х.Бодаухан, Ү.Маукей, Х.Орал,
+О.Хызымет, О.Малпан, Н.Блисан, Х.Сейтхан,
+Н.Сейтен, С.Адасхан, Д.Хиса, М.Ынтан,
+Т.Есентай, Б.Книяз, Х.Кабира, Л.Сахай,
+А.Адасхан, Х.Күмила, Ж.Дауит, Ж.Шаймардан,
+Ж.Ахмай, Ш.Лапи, Ш.Динсилам, К.Баршын,
+С.Озипат, О.Күлай, С.Унатхан, Х.Айтжан,
+Ү.Шазда, О.Солтан, Ш.Шабас, Т.Зейнелхан,
+М.Күлиман, А.Солтанбай, Х.Шарипхан,
+Т.Бажик, Н.Нүсирин, Н.Дэлгэр, Ж.Зайыхан,
+Т.Арабхан, Т.Гүлжарма, Ш.Рымхан, Х.Өкимет,
+М.Жүсирин, Х.Хобди болон бусад төгсөгчид.
+</p>
+
+<hr style="margin:25px 0;border:0;border-top:1px solid #ddd;">
+
+<p>
+<strong>Монгол сургуулийн анхны төгсөгчид:</strong>
+Ц.Цэвээн, Г.Буяндэлгэр, Ш.Цэдэн-Иш,
+Б.Чимэд-Очир нарын 71 хүүхэд.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= VISION ================= -->
+
+<section>
+<div class="container">
+
+<div class="section-title">
+<span>БИДНИЙ ЧИГЛЭЛ</span>
+<h2>Эрхэм зорилго</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">🎯</div>
+<h3>Эрхэм зорилго</h3>
+<p>
+Сурагч бүрийн мэдлэг, чадвар, авьяас,
+хүмүүжил, бүтээлч сэтгэлгээг хөгжүүлэх
+боловсролын орчныг бүрдүүлэх.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🌟</div>
+<h3>Алсын хараа</h3>
+<p>
+Өв соёлоо дээдэлсэн, мэдлэг чадвартай,
+хариуцлагатай, бүтээлч иргэнийг төлөвшүүлэх.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🤝</div>
+<h3>Үнэт зүйл</h3>
+<p>
+Хүндлэл, хариуцлага, хамтын ажиллагаа,
+суралцах хүсэл, шударга байдал.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+<div class="container contact-grid">
+
+<div>
+
+<h2>Холбоо барих</h2>
+
+<p>
+Сургуулийн талаарх дэлгэрэнгүй мэдээлэл,
+шинэчлэгдсэн багш ажилтны мэдээлэл болон
+холбоо барих сувгийг энд байрлуулж болно.
+</p>
+
+<div class="contact-item">
+<span>📍</span>
+<div>
+<strong>Хаяг</strong><br>
+Баян-Өлгий аймаг, Сагсай сум, 5-р баг, Уужим
+</div>
+</div>
+
+<div class="contact-item">
+<span>🏫</span>
+<div>
+<strong>Байгууллага</strong><br>
+Х.Мусаханы нэрэмжит ЕБ-ын 1 дүгээр сургууль
+</div>
+</div>
+
+<div class="contact-item">
+<span>🌐</span>
+<div>
+<strong>Эх сурвалж</strong><br>
+Сагсай сумын албан ёсны цахим хуудас
+</div>
+</div>
+
+</div>
+
+<div class="map">
+
+<div>
+<h2>📍 Сагсай сум</h2>
+<p>
+Сургуулийн байршлыг Google Maps-ээр
+харах бол доорх товчийг ашиглана уу.
+</p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Sagsai+Bayan-Ulgii+Mongolia"
+target="_blank">
+Google Maps нээх →
+</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+<div class="footer-title">
+САГСАЙ СУМЫН 1-Р СУРГУУЛЬ
+</div>
+<p>
+Х.Мусаханы нэрэмжит Ерөнхий боловсролын 1 дүгээр сургууль
+</p>
+</div>
+
+<div>
+<p>© <span id="year"></span> Сагсай сумын 1-р сургууль</p>
+<p>Бүх эрх хуулиар хамгаалагдсан.
+    site made by Erasyl
+</p>
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button class="top" id="topBtn" onclick="topFunction()">↑</button>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    const menu = document.getElementById("navLinks");
+
+    menu.classList.toggle("active");
+
+}
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document.getElementById("navLinks")
+        .classList.remove("active");
+
+    });
+
+});
+
+
+/* CURRENT YEAR */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* BACK TO TOP */
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 500){
+
+        topBtn.style.display = "block";
+
+    }else{
+
+        topBtn.style.display = "none";
+
+    }
+
+});
+
+
+function topFunction(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* SIMPLE SCROLL ANIMATION */
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold:.1
+    }
+);
+
+
+document.querySelectorAll(
+    ".card,.stat,.person,.news-card,.facility,.timeline-content"
+).forEach(el => {
+
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "opacity .6s ease, transform .6s ease";
+
+    observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
